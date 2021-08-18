@@ -1,0 +1,23 @@
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="view-trips">
+            {{#trips}}
+                <form action="./deletetrip" method="POST">
+                    {{tripInfo.title}}
+                    <img src="{{tripInfo.imgsrc}}" style="height: 100px; width: 100px">
+                    {{tripInfo.dateDepart}}
+                    {{tripInfo.dateReturn}}
+                    <input type="hidden" name="tripId" value="{{tripId}}">
+                    <input type="submit" value="Delete">
+                </form>
+            {{/trips}}
+            <a href="trip/addtrip">Add Another Trip</a>
+</body>
+</html>
