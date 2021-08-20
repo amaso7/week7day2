@@ -7,17 +7,18 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="view-trips">
-            {{#trips}}
-                <form action="./deletetrip" method="POST">
-                    {{tripInfo.title}}
-                    <img src="{{tripInfo.imgsrc}}" style="height: 100px; width: 100px">
-                    {{tripInfo.dateDepart}}
-                    {{tripInfo.dateReturn}}
-                    <input type="hidden" name="tripId" value="{{tripId}}">
-                    <input type="submit" value="Delete">
-                </form>
-            {{/trips}}
-            <a href="trip/addtrip">Add Another Trip</a>
+    <h1>Add trips></h1>
+        <form id = "add trip" action = "./addtrip" method = "post">
+            <label for = "trip-title">Title:</label>
+            <input id = "trip-title" type = "text">
+            <label for = "trip-imgsrc" type = "text"></label>
+            <input id = "trip-imgsrc" type = "url" name = "tripImgsrc"> 
+            <label for = "date-depart">Departure Date:</label>
+            <input for = "date-depart" type = "date" name = "dateDepart">
+            <label for = "date-return" type = "date" name = "dateReturn"></label>
+            <input id = "date-return" type = "date" name = "dateReturn">
+            <input type = "submit" value = "Add">
+    
+        </form>
 </body>
 </html>

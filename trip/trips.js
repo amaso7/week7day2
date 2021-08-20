@@ -16,6 +16,7 @@ app.set('view engine','mustache')
 let trips = []
 let deletedTrips = []
 
+console.log("TRIPS")
 
 router.get('/addTrip', (req,res) => {
     res.render('addTrip')
